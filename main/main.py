@@ -164,4 +164,102 @@
 
 # print(paragraph)
 
-# 28
+# 29
+
+# with open("input.txt", "r") as file:
+#     menu = file.read()
+
+# import re
+# words = re.findall(r'\b\w+\b', menu)
+
+# if words:
+#     longest_word = max(words, key=len)
+#     print(f"Eng uzun so`z {longest_word}")
+# else:
+#     print("so`z topilmadi")
+
+# 30
+
+# with open('input.txt', 'r') as f:
+#     content = f.read()
+
+# import re
+# words = re.findall(r'\b\w+\b', content)
+
+# if words:
+#     min_length = min(len(word) for word in words)
+#     shortest_words = [word for word in words if len(word) == min_length]
+#     last_shortest = shortest_words[-1]
+#     print(f"Eng qisqa oxirgi so'z: {last_shortest}")
+# else:
+#     print("So'z topilmadi")
+
+# 31
+# K = int(input("K = "))
+
+# with open('input.txt', 'r') as f:
+#     content = f.read()
+
+# import re
+# words = re.findall(r'\b[a-zA-Z]+\b', content)
+
+# words_with_length_k = [word for word in words if len(word) == K]
+
+# with open('output.txt', 'w') as f:
+#     if words_with_length_k:
+#         for word in words_with_length_k:
+#             f.write(word + '\n')
+
+# 32
+# C = input("C harfini kiriting: ").upper()
+
+# with open('input.txt', 'r', encoding='utf-8') as f:
+#     content = f.read()
+
+# import re
+# words = re.findall(r'\b[a-zA-Z]+\b', content)
+
+# words_starting_with_C = [word for word in words if word.upper().startswith(C)]
+
+# with open('output.txt', 'w', encoding='utf-8') as f:
+#     for word in words_starting_with_C:
+#         f.write(word + '\n')
+
+# 33
+
+# C = input("C harfini kiriting: ").lower()
+
+# with open('input.txt', 'r', encoding='utf-8') as f:
+#     content = f.read()
+
+# import re
+# words = re.findall(r'\b[a-zA-Z]+\b', content)
+
+# words_starting_with_C = [word for word in words if word.lower().startswith(C)]
+
+# with open('output.txt', 'w', encoding='utf-8') as f:
+#     for word in words_starting_with_C:
+#         f.write(word + '\n')
+
+# 34
+
+# with open('input.txt', 'r', encoding='utf-8') as f:
+#     lines = f.readlines()
+
+# WIDTH = 50
+# result_lines = []
+
+# for line in lines:
+#     line = line.rstrip('\n')
+#     if line.strip():
+#         spaces_needed = WIDTH - len(line)
+#         if spaces_needed > 0:
+#             justified_line = line + ' ' * spaces_needed
+#         else:
+#             justified_line = line[:WIDTH]
+#     else:
+#         justified_line = ''
+#     result_lines.append(justified_line + '\n')
+
+# with open('output.txt', 'w', encoding='utf-8') as f:
+#     f.writelines(result_lines)
